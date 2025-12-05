@@ -1,18 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cody Van Buren Real Estate</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cody Van Buren | Triangle Real Estate</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <div class="logo">CODY VAN BUREN</div>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#services">Buy &amp; Sell</a>
+        <a href="#featured">Featured</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <header>
-        <h1>Welcome to Cody Van Buren Real Estate</h1>
-        <p>Your next move starts here.</p>
-    </header>
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <p class="eyebrow">Triangle · North Carolina</p>
+          <h1>Thoughtful Real Estate for Real People.</h1>
+          <p class="hero-subtitle">
+            Strategic, detail-driven guidance for buyers and sellers who want more than a generic real estate experience.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn primary">Book a Strategy Call</a>
+            <a href="#about" class="btn ghost">Learn More</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <p class="hero-card-title">Your next move, handled.</p>
+          <p class="hero-card-text">
+            From first conversation to closing table, I’m here to keep you informed, prepared, and confident every step of the way.
+          </p>
+        </div>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container split">
+        <div>
+          <h2>Meet Cody</h2>
+          <p>
+            I’m a Triangle-based real estate agent who believes in being honest, prepared, and fully invested in my clients. 
+            My job is to make sure you always feel one step ahead—never rushed, pressured, or left guessing.
+          </p>
+          <p>
+            I study the market daily, pay close attention to pricing and neighborhood trends, and communicate clearly so you can 
+            make decisions with confidence. Whether you’re buying or selling, I’ll walk you through your options, explain the “why” 
+            behind the strategy, and keep the process as calm and straightforward as possible.
+          </p>
+          <p>
+            At the end of the day, real estate is personal. You deserve someone who shows up for the details and for you.
+          </p>
+        </div>
+        <div class="about-highlight">
+          <p class="label">Core Values</p>
+          <ul>
+            <li>Clarity over pressure</li>
+            <li>Honest guidance, not scripts</li>
+            <li>Strategic, data-informed decisions</li>
+            <li>Calm, steady communication</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section section-alt">
+      <div class="container">
+        <h2>How I Help</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Buying a Home</h3>
+            <p>
+              I’ll help you understand the market, refine your search, and move quickly when the right home appears—without skipping
+              the due diligence that protects you.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Selling a Home</h3>
+            <p>
+              From pricing strategy and prep to marketing and negotiation, we’ll build a plan that highlights your home’s strengths and 
+              speaks to the right buyers.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Relocating to the Triangle</h3>
+            <p>
+              New to the area? I’ll help you get oriented to neighborhoods, commute patterns, and lifestyle fit so your move feels 
+              intentional—not rushed.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED (placeholder for later MLS integration or manual listings) -->
+    <section id="featured" class="section">
+      <div class="container">
+        <h2>Featured &amp; Recent</h2>
+        <p class="muted">
+          Coming soon: a curated look at recent sales, featured listings, and stories from clients I’ve helped.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-alt">
+      <div class="container split">
+        <div>
+          <h2>Let’s Talk About Your Next Move</h2>
+          <p>
+            Whether you’re still in the “just thinking about it” stage or ready to take action, I’m happy to schedule a no-pressure 
+            conversation to talk through your options.
+          </p>
+          <p>
+            Share a bit about your situation, and I’ll follow up with next steps and ideas tailored to you.
+          </p>
+        </div>
+        <form class="contact-form">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            What can I help you with?
+            <textarea name="message" rows="4" placeholder="Buying, selling, relocating, just exploring..."></textarea>
+          </label>
+          <button type="submit" class="btn primary">Submit</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Cody Van Buren. All rights reserved.</p>
+      <p class="muted">Broker &amp; REALTOR&reg; | Compass</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
