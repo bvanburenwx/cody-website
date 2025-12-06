@@ -353,12 +353,118 @@ textarea:focus {
   font-size: 0.8rem;
 }
 
+/* Featured & Recent */
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.featured-note {
+  font-size: 0.85rem;
+}
+
+.featured-note a {
+  text-decoration: underline;
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.listing-card {
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  border: 1px solid var(--border-subtle);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  background-color: #11131a;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.listing-body {
+  padding: 1.2rem 1.3rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.listing-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.2rem;
+}
+
+.listing-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.listing-label--sold {
+  background: rgba(51, 191, 115, 0.08);
+  border-color: rgba(51, 191, 115, 0.7);
+}
+
+.listing-label--buyer {
+  background: rgba(123, 97, 255, 0.08);
+  border-color: rgba(123, 97, 255, 0.65);
+}
+
+.listing-label--coming {
+  background: rgba(255, 214, 102, 0.08);
+  border-color: rgba(255, 214, 102, 0.7);
+}
+
+.listing-price {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.listing-address {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.listing-meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.listing-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
 /* Responsive */
 
 @media (max-width: 900px) {
   .hero-content,
   .split,
-  .cards {
+  .cards,
+  .listing-grid {
     grid-template-columns: 1fr;
   }
 
@@ -390,3 +496,4 @@ textarea:focus {
     padding-top: 3.5rem;
   }
 }
+
