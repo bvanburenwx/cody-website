@@ -140,6 +140,14 @@ a:hover {
 .hero {
   position: relative;
   padding: 5rem 0 4rem;
+  background:
+    linear-gradient(
+      to bottom right,
+      rgba(15, 23, 42, 0.92),
+      rgba(15, 23, 42, 0.88),
+      rgba(15, 23, 42, 0.96)
+    ),
+    url("images/hero.jpg") center/cover no-repeat;
 }
 
 .hero::before {
@@ -147,8 +155,8 @@ a:hover {
   position: absolute;
   inset: -40%;
   background:
-    radial-gradient(circle at top right, rgba(56, 189, 248, 0.18), transparent 55%),
-    radial-gradient(circle at bottom left, rgba(251, 191, 36, 0.16), transparent 55%);
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.25), transparent 55%),
+    radial-gradient(circle at bottom left, rgba(251, 191, 36, 0.22), transparent 55%);
   opacity: 0.9;
   pointer-events: none;
   z-index: -1;
@@ -244,6 +252,36 @@ a:hover {
   grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
   gap: 2rem;
   align-items: flex-start;
+}
+
+/* Featured section background image */
+
+#featured {
+  position: relative;
+  overflow: hidden;
+}
+
+#featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(15, 23, 42, 0.96),
+      rgba(15, 23, 42, 0.9),
+      rgba(15, 23, 42, 0.98)
+    ),
+    url("images/featured.jpg") center/cover no-repeat;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* keep inner content above the background */
+#featured .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* About */
@@ -612,6 +650,35 @@ textarea:focus {
   font-size: 0.85rem;
   color: var(--muted);
   margin: 0;
+}
+
+/* Neighborhoods overview background image */
+
+#areas.section-alt {
+  position: relative;
+  overflow: hidden;
+}
+
+#areas.section-alt::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(15, 23, 42, 0.96),
+      rgba(15, 23, 42, 0.9),
+      rgba(15, 23, 42, 0.98)
+    ),
+    url("images/neighborhoods.jpg") center/cover no-repeat;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: -1;
+}
+
+#areas.section-alt .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* Responsive */
