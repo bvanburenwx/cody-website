@@ -73,6 +73,37 @@ a {
   font-size: 0.9rem;
 }
 
+.nav-toggle {
+  display: none; /* shown only on mobile via media query */
+  background: transparent;
+  border: none;
+  padding: 0.35rem;
+  cursor: pointer;
+}
+
+.nav-toggle-box {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle-line {
+  width: 20px;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--text);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+/* Animated “X” state */
+.nav-toggle.nav-toggle--active .nav-toggle-line:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.nav-toggle.nav-toggle--active .nav-toggle-line:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
+}
+
 .nav a {
   position: relative;
   padding-bottom: 3px;
@@ -331,8 +362,28 @@ textarea:focus {
     grid-template-columns: 1fr;
   }
 
+  /* Show hamburger on mobile */
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  /* Mobile nav layout */
   .nav {
-    display: none; /* keep it dead simple for now */
+    position: absolute;
+    right: 1.5rem;
+    top: 64px;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.9rem 1.1rem;
+    background: rgba(5, 6, 8, 0.98);
+    border-radius: 999px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    display: none;
+  }
+
+  .nav.nav--open {
+    display: flex;
   }
 
   .hero {
