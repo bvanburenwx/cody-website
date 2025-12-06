@@ -505,6 +505,41 @@ textarea:focus {
   font-size: 0.8rem;
 }
 
+/* Neighborhood sub-sections */
+
+.subhood {
+  margin-top: 1.4rem;
+}
+
+.subhood h4 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+}
+
+.subhood-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.subhood-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  padding: 0.9rem 0.9rem 0.8rem;
+  background: rgba(5, 6, 8, 0.92);
+}
+
+.subhood-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.subhood-text {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0;
+}
 
 /* Responsive */
 
@@ -513,11 +548,10 @@ textarea:focus {
   .split,
   .cards,
   .listing-grid,
-  .neighborhood-grid {
+  .neighborhood-grid,
+  .subhood-grid {
     grid-template-columns: 1fr;
   }
-}
-
 
   /* Show hamburger on mobile */
   .nav-toggle {
@@ -546,5 +580,4 @@ textarea:focus {
   .hero {
     padding-top: 3.5rem;
   }
-
-
+}
